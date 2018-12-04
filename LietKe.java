@@ -98,7 +98,7 @@ public class LietKe {
                             } else {
                                 for (int cVeTrai = 0; cVeTrai < ct[veTrai].length; cVeTrai++) {
                                     for (int cVeGiua = cVeTrai; cVeGiua < ct[veGiua].length; cVeGiua++) {
-                                        for (int cVePhai = cVeGiua; cVePhai < ct[vePhai].length; cVePhai++) {
+                                        for (int cVePhai = 0; cVePhai < ct[vePhai].length; cVePhai++) {
                                             if (cVeTrai == cVeGiua) {
                                                 ct[soC][chiSo] = ct[vePhai][cVePhai] + "-C(" + ctNguoc[veTrai][cVeTrai] + ")2";
                                                 ctNguoc[soC][chiSo] = "C(" + ctNguoc[veTrai][cVeTrai] + ")2-" + ctNguoc[vePhai][cVePhai];
@@ -115,7 +115,7 @@ public class LietKe {
                         } else {
                             if (veGiua == vePhai) {
                                 for (int cVeTrai = 0; cVeTrai < ct[veTrai].length; cVeTrai++) {
-                                    for (int cVeGiua = cVeTrai; cVeGiua < ct[veGiua].length; cVeGiua++) {
+                                    for (int cVeGiua = 0; cVeGiua < ct[veGiua].length; cVeGiua++) {
                                         for (int cVePhai = cVeGiua; cVePhai < ct[vePhai].length; cVePhai++) {
                                             if (cVeGiua == cVePhai) {
                                                 ct[soC][chiSo] = ct[veTrai][cVeTrai] + "-C(" + ctNguoc[vePhai][cVePhai] + ")2";
@@ -131,8 +131,8 @@ public class LietKe {
                                 }
                             } else {
                                 for (int cVeTrai = 0; cVeTrai < ct[veTrai].length; cVeTrai++) {
-                                    for (int cVeGiua = cVeTrai; cVeGiua < ct[veGiua].length; cVeGiua++) {
-                                        for (int cVePhai = cVeGiua; cVePhai < ct[vePhai].length; cVePhai++) {
+                                    for (int cVeGiua = 0; cVeGiua < ct[veGiua].length; cVeGiua++) {
+                                        for (int cVePhai = 0; cVePhai < ct[vePhai].length; cVePhai++) {
                                             ct[soC][chiSo] = ct[vePhai][cVePhai] + "-C(" + ctNguoc[veTrai][cVeTrai] + ")(" + ctNguoc[veGiua][cVeGiua] + ")";
                                             ctNguoc[soC][chiSo] = "C(" + ctNguoc[veGiua][cVeGiua] + ")(" + ctNguoc[veTrai][cVeTrai] + ")-" + ctNguoc[vePhai][cVePhai];
                                             writer.write(ct[soC][chiSo] + "-OH\r\n");
