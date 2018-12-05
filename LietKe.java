@@ -30,7 +30,7 @@ public class LietKe {
                 int chiSo = 0;
                 for (chiSo = 0; chiSo < ct[soC - 1].length; chiSo++) {
                     ct[soC][chiSo] = ct[soC - 1][chiSo] + "-CH2";
-                    ctNguoc[soC][chiSo] = "CH2-" + ct[soC - 1][chiSo];
+                    ctNguoc[soC][chiSo] = "CH2-" + ctNguoc[soC - 1][chiSo];
                     writer.write(ct[soC][chiSo] + "-OH\r\n");
                 }
                 int du = (soC - 1) / 2;
